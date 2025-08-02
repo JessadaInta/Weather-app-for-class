@@ -14,11 +14,13 @@ body {
     border-radius: 1rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     width: 90%;
-    max-width: 500px;
+    max-width: 700px;
     text-align: center;
 }
 h1 { color: #f7f7f7; }
+
 #search-form { display: flex; gap: 0.5rem; margin: 1.5rem 0; }
+
 #city-input {
     flex-grow: 1; padding: 0.75rem; border: 1px solid #d4ba21;
     border-radius: 0.5rem; background: #051923; color: #E0E1DD;
@@ -35,17 +37,22 @@ h1 { color: #f7f7f7; }
 .error { color: #9b0a0a; font-weight: bold; }
 
 .forecast-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 16px;
-    flex-wrap: wrap;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .forecast-day {
-    width: 120px;
-    text-align: center;
-    padding: 10px;
-    border: 3px solid #ccc;
-    border-radius: 8px;
     background: linear-gradient(135deg, #5166e2 0%, #c7abe2 100%);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+}
+
+.forecast-day:hover {
+    transform: translateY(-4px);
 }
