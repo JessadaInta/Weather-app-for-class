@@ -14,7 +14,7 @@ body {
     border-radius: 1rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     width: 90%;
-    max-width: 400px;
+    max-width: 500px;
     text-align: center;
 }
 h1 { color: #f7f7f7; }
@@ -33,3 +33,19 @@ h1 { color: #f7f7f7; }
 .weather-info { margin-top: 1.5rem; min-height: 150px; }
 .weather-info .temp { font-size: 3rem; font-weight: bold; margin: 0.5rem 0; }
 .error { color: #9b0a0a; font-weight: bold; }
+
+.forecast-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.forecast-day {
+    width: 120px;
+    text-align: center;
+    padding: 10px;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #5166e2 0%, #c7abe2 100%);
+}
